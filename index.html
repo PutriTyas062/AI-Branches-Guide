@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 Cabang AI: Inspirasi, Algoritma, dan Implementasi</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .branch-card {
+            background: white;
+            border-radius: 15px;
+            margin: 20px 0;
+            padding: 25px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            backdrop: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .branch-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .branch-title {
+            color: #4a5568;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 10px;
+        }
+
+        .inspiration-section, .algorithm-section, .implementation-section {
+            margin: 20px 0;
+        }
+
+        .section-title {
+            color: #2d3748;
+            font-size: 1.3em;
+            margin-bottom: 10px;
+            padding: 8px 15px;
+            background: linear-gradient(90deg, #f7fafc, #e2e8f0);
+            border-left: 4px solid #667eea;
+            border-radius: 5px;
+        }
+
+        .algorithm-item {
+            background: #f8f9fa;
+            padding: 15px;
+            margin: 10px 0;
+            border-radius: 8px;
+            border-left: 4px solid #38a169;
+        }
+
+        .algorithm-name {
+            font-weight: bold;
+            color: #2d3748;
+            font-size: 1.1em;
+        }
+
+        .algorithm-description {
+            margin-top: 5px;
+            color: #4a5568;
+        }
+
+        .code-block {
+            background: #1a202c;
+            color: #e2e8f0;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 10px 0;
+            overflow-x: auto;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9em;
+        }
+
+        .product-example {
+            background: #e6fffa;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+            border-left: 4px solid #38b2ac;
+        }
+
+        .formula {
+            background: #fffaf0;
+            padding: 12px;
+            border-radius: 8px;
+            margin: 8px 0;
+            border-left: 4px solid #ed8936;
+            font-family: 'Times New Roman', serif;
+            text-align: center;
+            font-size: 1.1em;
+        }
+
+        .diagram {
+            text-align: center;
+            padding: 20px;
+            background: #f0f8ff;
+            border-radius: 8px;
+            margin: 10px 0;
+            border: 2px dashed #4299e1;
+        }
+
+        .nav-menu {
+            background: rgba(255,255,255,0.1);
+            background-blend-mode:  blur(10px);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .nav-menu a {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+            padding: 8px 15px;
+            border-radius: 20px;
+            background: rgba(255,255,255,0.1);
+            transition: background 0.3s ease;
+            display: inline-block;
+            margin-bottom: 5px;
+        }
+
+        .nav-menu a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🤖 12 Cabang AI: Inspirasi, Algoritma, dan Implementasi</h1>
+        
+        <div class="nav-menu">
+            <a href="#heuristic">Heuristic Search</a>
+            <a href="#optimization">Optimization AI</a>
+            <a href="#ml">Machine Learning</a>
+            <a href="#dl">Deep Learning</a>
+            <a href="#nlp">NLP</a>
+            <a href="#cv">Computer Vision</a>
+            <a href="#expert">Expert Systems</a>
+            <a href="#robotics">Robotics</a>
+            <a href="#agents">Intelligent Agents</a>
+            <a href="#fuzzy">Fuzzy Logic</a>
+            <a href="#evolutionary">Evolutionary Computing</a>
+            <a href="#bioinspired">Bio-Inspired AI</a>
+        </div>
+
+        <!-- 1. Heuristic Search -->
+        <div class="branch-card" id="heuristic">
+            <h2 class="branch-title">🎯 1. Heuristic Search</h2>
+            
+            <div class="inspiration-section">
+                <h3 class="section-title">💡 Inspirasi</h3>
+                <p>Terinspirasi dari cara manusia memecahkan masalah dengan menggunakan "rules of thumb" atau intuisi yang terbukti efektif, tanpa harus mencoba semua kemungkinan solusi.</p>
+            </div>
+
+            <div class="algorithm-section">
+                <h3 class="section-title">🔧 Algoritma Utama</h3>
+                
+                <div class="algorithm-item">
+                    <div class="algorithm-name">1. A* (A-Star) Algorithm</div>
+                    <div class="algorithm-description">Algoritma pencarian best-first yang menggunakan fungsi evaluasi f(n) = g(n) + h(n)</div>
+                    <div class="formula">f(n) = g(n) + h(n)<br>
+                    g(n) = cost dari start ke node n<br>
+                    h(n) = heuristic cost dari n ke goal</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">2. Greedy Best-First Search</div>
+                    <div class="algorithm-description">Selalu memilih node dengan nilai heuristik terbaik</div>
+                    <div class="formula">f(n) = h(n)<br>Pilih node dengan h(n) minimum</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">3. Hill Climbing</div>
+                    <div class="algorithm-description">Algoritma optimasi lokal yang bergerak ke arah peningkatan nilai</div>
+                    <div class="formula">x_{next} = argmax(f(neighbor(x_{current})))</div>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h3 class="section-title">⚙️ Implementasi A* Algorithm</h3>
+                <div class="code-block">
+import heapq
+
+class AStar:
+    def __init__(self, grid):
+        self.grid = grid
+        self.rows = len(grid)
+        self.cols = len(grid[0])
+    
+    def heuristic(self, a, b):
+        return abs(a[0] - b[0]) + abs(a[1] - b[1])  # Manhattan distance
+    
+    def get_neighbors(self, node):
+        neighbors = []
+        for dx, dy in [(0,1), (1,0), (0,-1), (-1,0)]:
+            x, y = node[0] + dx, node[1] + dy
+            if 0 <= x < self.rows and 0 <= y < self.cols and self.grid[x][y] != 1:
+                neighbors.append((x, y))
+        return neighbors
+    
+    def search(self, start, goal):
+        open_set = [(0, start)]
+        came_from = {}
+        g_score = {start: 0}
+        f_score = {start: self.heuristic(start, goal)}
+        
+        while open_set:
+            current = heapq.heappop(open_set)[1]
+            
+            if current == goal:
+                path = []
+                while current in came_from:
+                    path.append(current)
+                    current = came_from[current]
+                return path[::-1]
+            
+            for neighbor in self.get_neighbors(current):
+                tentative_g = g_score[current] + 1
+                
+                if neighbor not in g_score or tentative_g < g_score[neighbor]:
+                    came_from[neighbor] = current
+                    g_score[neighbor] = tentative_g
+                    f_score[neighbor] = tentative_g + self.heuristic(neighbor, goal)
+                    heapq.heappush(open_set, (f_score[neighbor], neighbor))
+        
+        return None
+                </div>
+
+                <div class="product-example">
+                    <strong>🎮 Contoh Produk:</strong>
+                    <ul>
+                        <li>Google Maps - Pencarian rute tercepat</li>
+                        <li>Game AI - Pathfinding untuk NPC</li>
+                        <li>Robot Navigation - Navigasi otonom</li>
+                    </ul>
+                </div>
+
+                <div class="diagram">
+                    <strong>📊 Diagram A* Search</strong><br>
+                    Start → [Open List] → Evaluate f(n) → Select Best → Goal<br>
+                    ↓<br>
+                    [Closed List] ← Processed Nodes
+                </div>
+            </div>
+        </div>
+
+        <!-- 2. Optimization-Based AI -->
+        <div class="branch-card" id="optimization">
+            <h2 class="branch-title">📈 2. Optimization-Based AI</h2>
+            
+            <div class="inspiration-section">
+                <h3 class="section-title">💡 Inspirasi</h3>
+                <p>Terinspirasi dari prinsip ekonomi dan fisika untuk mencari solusi optimal dengan meminimalkan atau memaksimalkan fungsi objektif tertentu.</p>
+            </div>
+
+            <div class="algorithm-section">
+                <h3 class="section-title">🔧 Algoritma Utama</h3>
+                
+                <div class="algorithm-item">
+                    <div class="algorithm-name">1. Gradient Descent</div>
+                    <div class="algorithm-description">Optimasi iteratif untuk mencari minimum fungsi</div>
+                    <div class="formula">θ_{t+1} = θ_t - α∇f(θ_t)<br>α = learning rate</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">2. Simulated Annealing</div>
+                    <div class="algorithm-description">Metaheuristik yang meniru proses annealing dalam metalurgi</div>
+                    <div class="formula">P(accept) = exp(-ΔE/T)<br>T = temperature (menurun seiring waktu)</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">3. Linear Programming</div>
+                    <div class="algorithm-description">Optimasi linear dengan constraint</div>
+                    <div class="formula">minimize: c^T x<br>subject to: Ax ≤ b, x ≥ 0</div>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h3 class="section-title">⚙️ Implementasi Gradient Descent</h3>
+                <div class="code-block">
+import numpy as np
+import matplotlib.pyplot as plt
+
+class GradientDescent:
+    def __init__(self, learning_rate=0.01, max_iterations=1000):
+        self.learning_rate = learning_rate
+        self.max_iterations = max_iterations
+        self.cost_history = []
+    
+    def compute_cost(self, X, y, theta):
+        m = len(y)
+        predictions = X.dot(theta)
+        cost = (1/(2*m)) * np.sum((predictions - y)**2)
+        return cost
+    
+    def compute_gradient(self, X, y, theta):
+        m = len(y)
+        predictions = X.dot(theta)
+        gradient = (1/m) * X.T.dot(predictions - y)
+        return gradient
+    
+    def fit(self, X, y):
+        # Add bias column
+        X = np.c_[np.ones(X.shape[0]), X]
+        
+        # Initialize parameters
+        theta = np.zeros(X.shape[1])
+        
+        for i in range(self.max_iterations):
+            cost = self.compute_cost(X, y, theta)
+            gradient = self.compute_gradient(X, y, theta)
+            
+            theta = theta - self.learning_rate * gradient
+            self.cost_history.append(cost)
+            
+            # Early stopping
+            if i > 0 and abs(self.cost_history[-2] - cost) < 1e-8:
+                break
+        
+        self.theta = theta
+        return self
+    
+    def predict(self, X):
+        X = np.c_[np.ones(X.shape[0]), X]
+        return X.dot(self.theta)
+
+# Example usage
+X = np.random.randn(100, 1)
+y = 2*X.flatten() + 1 + np.random.randn(100)*0.1
+
+gd = GradientDescent(learning_rate=0.01)
+gd.fit(X, y)
+predictions = gd.predict(X)
+                </div>
+
+                <div class="product-example">
+                    <strong>🏭 Contoh Produk:</strong>
+                    <ul>
+                        <li>Supply Chain Optimization - Amazon, FedEx</li>
+                        <li>Portfolio Optimization - Trading algorithms</li>
+                        <li>Resource Scheduling - Cloud computing platforms</li>
+                    </ul>
+                </div>
+
+                <div class="diagram">
+                    <strong>📊 Diagram Gradient Descent</strong><br>
+                    Start Point → Calculate Gradient → Update Parameters → Check Convergence<br>
+                    ↓ (if not converged)<br>
+                    Repeat → Global/Local Minimum
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. Machine Learning -->
+        <div class="branch-card" id="ml">
+            <h2 class="branch-title">🧠 3. Machine Learning (ML)</h2>
+            
+            <div class="inspiration-section">
+                <h3 class="section-title">💡 Inspirasi</h3>
+                <p>Terinspirasi dari cara manusia belajar dari pengalaman dan data untuk membuat prediksi atau keputusan tanpa diprogram secara eksplisit.</p>
+            </div>
+
+            <div class="algorithm-section">
+                <h3 class="section-title">🔧 Algoritma Utama</h3>
+                
+                <div class="algorithm-item">
+                    <div class="algorithm-name">1. Random Forest</div>
+                    <div class="algorithm-description">Ensemble method yang menggunakan multiple decision trees</div>
+                    <div class="formula">Prediction = Mode/Mean(Tree₁, Tree₂, ..., TreeN)<br>Each tree trained on bootstrap sample</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">2. Support Vector Machine (SVM)</div>
+                    <div class="algorithm-description">Klasifikasi dengan mencari hyperplane optimal</div>
+                    <div class="formula">w·x + b = 0 (hyperplane)<br>maximize: margin = 2/||w||</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">3. K-Means Clustering</div>
+                    <div class="algorithm-description">Unsupervised learning untuk clustering data</div>
+                    <div class="formula">J = Σᵢ Σⱼ ||xⱼ - μᵢ||²<br>Update: μᵢ = (1/|Cᵢ|) Σ_{x∈Cᵢ} x</div>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h3 class="section-title">⚙️ Implementasi Random Forest</h3>
+                <div class="code-block">
+import numpy as np
+from collections import Counter
+import random
+
+class DecisionTree:
+    def __init__(self, max_depth=10, min_samples_split=2):
+        self.max_depth = max_depth
+        self.min_samples_split = min_samples_split
+    
+    def fit(self, X, y):
+        self.n_features = X.shape[1]
+        self.tree = self._grow_tree(X, y)
+    
+    def _grow_tree(self, X, y, depth=0):
+        n_samples, n_features = X.shape
+        n_labels = len(np.unique(y))
+        
+        # Stopping criteria
+        if (depth >= self.max_depth or n_labels == 1 or 
+            n_samples < self.min_samples_split):
+            leaf_value = self._most_common_label(y)
+            return leaf_value
+        
+        # Find best split
+        feat_idxs = np.random.choice(n_features, int(np.sqrt(n_features)), replace=False)
+        best_feat, best_thresh = self._best_criteria(X, y, feat_idxs)
+        
+        # Grow children
+        left_idxs, right_idxs = self._split(X[:, best_feat], best_thresh)
+        left = self._grow_tree(X[left_idxs, :], y[left_idxs], depth+1)
+        right = self._grow_tree(X[right_idxs, :], y[right_idxs], depth+1)
+        
+        return {'feature': best_feat, 'threshold': best_thresh, 
+                'left': left, 'right': right}
+    
+    def predict(self, X):
+        return np.array([self._traverse_tree(x, self.tree) for x in X])
+
+class RandomForest:
+    def __init__(self, n_trees=100, max_depth=10, min_samples_split=2):
+        self.n_trees = n_trees
+        self.max_depth = max_depth
+        self.min_samples_split = min_samples_split
+        self.trees = []
+    
+    def fit(self, X, y):
+        self.trees = []
+        for _ in range(self.n_trees):
+            tree = DecisionTree(self.max_depth, self.min_samples_split)
+            X_sample, y_sample = self._bootstrap_sample(X, y)
+            tree.fit(X_sample, y_sample)
+            self.trees.append(tree)
+    
+    def _bootstrap_sample(self, X, y):
+        n_samples = X.shape[0]
+        idxs = np.random.choice(n_samples, n_samples, replace=True)
+        return X[idxs], y[idxs]
+    
+    def predict(self, X):
+        tree_preds = np.array([tree.predict(X) for tree in self.trees])
+        # Majority vote
+        return np.array([Counter(tree_preds[:, i]).most_common(1)[0][0] 
+                        for i in range(len(X))])
+                </div>
+
+                <div class="product-example">
+                    <strong>🛍️ Contoh Produk:</strong>
+                    <ul>
+                        <li>Netflix - Recommendation system</li>
+                        <li>Credit Scoring - Bank loan decisions</li>
+                        <li>Fraud Detection - PayPal, credit cards</li>
+                    </ul>
+                </div>
+
+                <div class="diagram">
+                    <strong>📊 Diagram Machine Learning Pipeline</strong><br>
+                    Raw Data → Feature Engineering → Model Training → Validation → Deployment<br>
+                    ↓<br>
+                    Feedback Loop ← Model Performance ← Real-world Data
+                </div>
+            </div>
+        </div>
+
+        <!-- 4. Deep Learning -->
+        <div class="branch-card" id="dl">
+            <h2 class="branch-title">🧬 4. Deep Learning</h2>
+            
+            <div class="inspiration-section">
+                <h3 class="section-title">💡 Inspirasi</h3>
+                <p>Terinspirasi dari struktur dan fungsi neuron dalam otak manusia, menggunakan jaringan neural berlapis untuk memproses informasi kompleks.</p>
+            </div>
+
+            <div class="algorithm-section">
+                <h3 class="section-title">🔧 Algoritma Utama</h3>
+                
+                <div class="algorithm-item">
+                    <div class="algorithm-name">1. Convolutional Neural Network (CNN)</div>
+                    <div class="algorithm-description">Neural network untuk pemrosesan data grid seperti gambar</div>
+                    <div class="formula">Output = σ(W * X + b)<br>* = convolution operation<br>σ = activation function</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">2. Recurrent Neural Network (RNN/LSTM)</div>
+                    <div class="algorithm-description">Neural network untuk data sekuensial</div>
+                    <div class="formula">hₜ = σ(Wₕₓxₜ + Wₕₕhₜ₋₁ + bₕ)<br>LSTM: fₜ = σ(Wf·[hₜ₋₁, xₜ] + bf)</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">3. Transformer</div>
+                    <div class="algorithm-description">Architecture dengan attention mechanism</div>
+                    <div class="formula">Attention(Q,K,V) = softmax(QK^T/√dₖ)V<br>MultiHead = Concat(head₁,...,headₕ)W^O</div>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h3 class="section-title">⚙️ Implementasi Simple CNN</h3>
+                <div class="code-block">
+import numpy as np
+
+class Conv2D:
+    def __init__(self, num_filters, filter_size, stride=1, padding=0):
+        self.num_filters = num_filters
+        self.filter_size = filter_size
+        self.stride = stride
+        self.padding = padding
+        
+        # Initialize filters randomly
+        self.filters = np.random.randn(num_filters, filter_size, filter_size) * 0.1
+        self.bias = np.zeros((num_filters, 1))
+    
+    def forward(self, input_data):
+        self.input_data = input_data
+        h, w = input_data.shape
+        
+        # Add padding
+        if self.padding > 0:
+            input_padded = np.pad(input_data, self.padding, mode='constant')
+        else:
+            input_padded = input_data
+        
+        # Calculate output dimensions
+        output_h = (h + 2*self.padding - self.filter_size) // self.stride + 1
+        output_w = (w + 2*self.padding - self.filter_size) // self.stride + 1
+        
+        output = np.zeros((self.num_filters, output_h, output_w))
+        
+        # Perform convolution
+        for f in range(self.num_filters):
+            for i in range(output_h):
+                for j in range(output_w):
+                    # Extract region
+                    region = input_padded[i*self.stride:i*self.stride+self.filter_size,
+                                        j*self.stride:j*self.stride+self.filter_size]
+                    
+                    # Convolve
+                    output[f, i, j] = np.sum(region * self.filters[f]) + self.bias[f]
+        
+        return output
+
+class MaxPool2D:
+    def __init__(self, pool_size=2, stride=2):
+        self.pool_size = pool_size
+        self.stride = stride
+    
+    def forward(self, input_data):
+        num_filters, h, w = input_data.shape
+        
+        output_h = (h - self.pool_size) // self.stride + 1
+        output_w = (w - self.pool_size) // self.stride + 1
+        
+        output = np.zeros((num_filters, output_h, output_w))
+        
+        for f in range(num_filters):
+            for i in range(output_h):
+                for j in range(output_w):
+                    region = input_data[f, 
+                                      i*self.stride:i*self.stride+self.pool_size,
+                                      j*self.stride:j*self.stride+self.pool_size]
+                    output[f, i, j] = np.max(region)
+        
+        return output
+
+# Simple CNN Architecture
+class SimpleCNN:
+    def __init__(self):
+        self.conv1 = Conv2D(num_filters=32, filter_size=3, padding=1)
+        self.pool1 = MaxPool2D(pool_size=2)
+        self.conv2 = Conv2D(num_filters=64, filter_size=3, padding=1)
+        self.pool2 = MaxPool2D(pool_size=2)
+    
+    def forward(self, x):
+        x = self.conv1.forward(x)
+        x = np.maximum(0, x)  # ReLU activation
+        x = self.pool1.forward(x)
+        
+        x = self.conv2.forward(x)
+        x = np.maximum(0, x)  # ReLU activation
+        x = self.pool2.forward(x)
+        
+        return x
+                </div>
+
+                <div class="product-example">
+                    <strong>🎨 Contoh Produk:</strong>
+                    <ul>
+                        <li>ChatGPT/GPT-4 - Language models</li>
+                        <li>Tesla Autopilot - Computer vision for self-driving</li>
+                        <li>DeepMind AlphaGo - Game playing AI</li>
+                    </ul>
+                </div>
+
+                <div class="diagram">
+                    <strong>📊 Diagram CNN Architecture</strong><br>
+                    Input Image → Conv Layer → ReLU → Pooling → Conv Layer → ReLU → Pooling → FC → Output<br>
+                    ↓<br>
+                    Feature Maps → Dimensionality Reduction → Classification
+                </div>
+            </div>
+        </div>
+
+        <!-- 5. Natural Language Processing -->
+        <div class="branch-card" id="nlp">
+            <h2 class="branch-title">💬 5. Natural Language Processing (NLP)</h2>
+            
+            <div class="inspiration-section">
+                <h3 class="section-title">💡 Inspirasi</h3>
+                <p>Terinspirasi dari kemampuan manusia untuk memahami, menginterpretasi, dan menghasilkan bahasa alami untuk komunikasi yang efektif.</p>
+            </div>
+
+            <div class="algorithm-section">
+                <h3 class="section-title">🔧 Algoritma Utama</h3>
+                
+                <div class="algorithm-item">
+                    <div class="algorithm-name">1. TF-IDF (Term Frequency-Inverse Document Frequency)</div>
+                    <div class="algorithm-description">Metrik untuk mengevaluasi pentingnya kata dalam dokumen</div>
+                    <div class="formula">TF-IDF(t,d) = TF(t,d) × IDF(t)<br>IDF(t) = log(N/df(t))<br>N = total documents, df(t) = documents containing term t</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">2. Word2Vec</div>
+                    <div class="algorithm-description">Word embeddings menggunakan neural networks</div>
+                    <div class="formula">Skip-gram: P(wₒ|wᵢ) = exp(v'ₒᵀvᵢ)/Σⱼexp(v'ⱼᵀvᵢ)<br>CBOW: P(wᵢ|context) = softmax(Wₒh)</div>
+                </div>
+
+                <div class="algorithm-item">
+                    <div class="algorithm-name">3. BERT (Bidirectional Encoder Representations)</div>
+                    <div class="algorithm-description">Transformer-based model untuk understanding bahasa</div>
+                    <div class="formula">BERT = Transformer Encoder Stack<br>Attention(Q,K,V) = softmax(QKᵀ/√d)V</div>
+                </div>
+            </div>
+
+            <div class="implementation-section">
+                <h3 class="section-title">⚙️ Implementasi TF-IDF</h3>
+                <div class="code-block">
+import numpy as np
+import re
+from collections import Counter
+import math
+
+class TFIDFVectorizer:
+    def __init__(self, max_features=None, stop_words=None):
+        self.max_features = max_features
+        self.stop_words = stop_words or set()
+        self.vocabulary = {}
+        self.idf_values = {}
